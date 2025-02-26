@@ -1,0 +1,113 @@
+import pygame as p
+import random 
+
+p.init()
+
+#codigo para determinar cor
+PRETO = (0,0,0)
+BRANCO =(255, 255, 255)
+VERDE = (0,255,0)
+VERMELHO = (255,0,0)
+AZUL = (0,0,255)
+
+
+#variavel para tamanho de tela
+ALTURA = 400
+LARGURA= 600
+
+
+# Código para criar tela=
+tela = p.display.set_mode((LARGURA,ALTURA))
+titulo = p.display.set_caption('Snake')
+
+
+#definição tamanho da cobra
+TCOBRA=20
+
+clock = p.time.Clock()
+
+
+
+#codigo para apl9car tela
+def desenha(cobra):
+    for segmento in cobra:
+        p.draw.rect(tela, VERDE, [segmento[0], segmento[1], TCOBRA, TCOBRA])
+
+
+def jogo():
+
+    x_cobra = LARGURA // 2
+    y_cobra = ALTURA // 2
+    movimento_x = 0
+    movimento_y = 0
+    cobra = []
+    comprimento_cobra = 1
+
+
+    comida_X=  random.randrange(0, LARGURA - TCOBRA, TCOBRA)
+    comida_y=  random.randrange(0, ALTURA - TCOBRA, TCOBRA)
+
+    fim_de_jogo = False
+    while not fim_de_jogo:
+        for evento in p.event.get():
+            if evento.type == p.QUIT:
+                fim_de_jogo = True
+        if evento.type == p.KEYDOWN:
+            if evento.key == p.K_LEFT:
+                movimento_x = -TCOBRA
+                movimento_y = 0
+            elif evento.key == p.K_RIGHT:
+                    movimento_x = TCOBRA
+                    movimento_y = 0
+            elif evento.key == p.K_UP:
+                    movimento_y = -TCOBRA
+                    movimento_x = 0        
+            elif evento.key == p.K_DOWN:
+                    movimento_y = TCOBRA
+                    movimento_x = 0
+
+        if x_cobra >= LARGURA or x_cobra < 0 or y_cobra >= ALTURA or y_cobra < 0:
+            fim_de_jogo = True
+
+
+        x_cobra += movimento_x
+        y_cobra += movimento_y
+
+
+        cabeça_cobra = []
+        cabeça_cobra.append(x_cobra)
+        cabeça_cobra.append(y_cobra)
+        cobra.append(cabeça_cobra)
+
+        if len(cobra) > comprimento_cobra:
+                    del cobra[0]
+
+        #Verificar se a cobra colidiu com ela mesma
+        for segmento in cobra [:-1]:
+            if segmento == cabeça_cobra:
+                fim_de_jogo= True
+
+        tela.fill(PRETO)
+        desenha(cobra)
+        p.draw.rect(tela, VERMELHO, [comida_X, comida_y, TCOBRA, TCOBRA])
+
+        if x_cobra == comida_X and y_cobra == comida_y:
+            comida_X=  random.randrange(0, LARGURA - TCOBRA, TCOBRA)
+            comida_y=  random.randrange(0, ALTURA - TCOBRA, TCOBRA)
+            comprimento_cobra += 1
+
+
+
+
+        p.display.update()
+        clock.tick(15)
+
+
+    fonte = p.font.SysFont(None,55)
+    texto_fim = fonte.render("Fim de jogo!", True, AZUL)
+    tela.blit(texto_fim, [LARGURA // 3, ALTURA //3])
+    p.display.update()
+    p.time.wait(1000)
+    p.quit()
+
+jogo()
