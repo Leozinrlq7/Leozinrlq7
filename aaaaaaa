@@ -1,0 +1,36 @@
+import flet as ft
+import  pessoa
+#comando para criaçao de pagina em branco
+def main(page: ft.Page):
+    page.title = "Calculadora" 
+    page.window_center()
+    page.window_width ='545'
+    page.window_height ='390'
+    page.window_resizable = False
+    page.window_maximizable = False
+
+
+    t = ft.TextField(label="Digite seu nome" )
+    c = ft.FilledButton("salvar",on_click=lambda e:salvar(e))
+    n = ft.Row ([t,c])
+
+
+    w = ft.TextField(label="Digite seu CPF" )    
+    
+
+    def salvar(e):
+        pessoa.nome=t.value
+        pessoa.Cpf=t.value
+
+        t.value=""
+        atualizar()
+        page.update()
+
+    def atualizar():
+        text=ft.Text(f'{pessoa.nome},{pessoa.Cpf}')
+        page.add(text)
+
+
+    
+    page.add(n,w)
+ft.app(main)
