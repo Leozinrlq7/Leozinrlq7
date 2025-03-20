@@ -1,0 +1,3 @@
+nome=[]
+Cpf=[]
+pessoa= [nome,Cpf]
