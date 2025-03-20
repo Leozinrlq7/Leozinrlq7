@@ -1,0 +1,27 @@
+import flet as ft
+import pessoa
+#comando papa criação de pagina em branco
+def main(page: ft.Page):
+    page.bgcolor = "#ffffff"
+    page.window_center()
+    page.window_width = '500'
+    page.window_height = '400'
+    page.window_resizable = False
+    page.padding = 75
+    page.window_maximizable = False
+
+    t= ft.TextField(label="Insira seu nome"),
+    
+    b= ft.FilledButton("Salvar", on_click=lambda e:salvar),
+    f1=ft.Row([t,b]),
+
+    def salvar(e):
+        t.value =""
+        
+        page.update
+
+
+
+    
+    page.add(f1)
+ft.app(main)
