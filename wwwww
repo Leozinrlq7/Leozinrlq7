@@ -1,0 +1,155 @@
+import flet as ft
+import loginbc
+#comando para criação de página em branco
+def main(page: ft.Page):
+    page.bgcolor = "#52498C"
+    page.window_center()
+    page.window_width = '1100'
+    page.window_height = '600'
+    page.window_resizable = False
+    page.window_maximizable = False
+    page.horizontal_alignment='start'
+
+
+
+
+    r1=ft.Row([
+
+    
+
+            ft.Container(
+                bgcolor="#ffffff",
+                width='450',
+                height='540',
+                border_radius=10,
+                padding=25,
+                content=ft.Column([
+        
+                        ft.Text('Faça seu login', size=35, color ='#120F26', font_family="RobotoSlab",
+        weight=ft.FontWeight.W_700,),
+                        
+                        ft.Container(content=ft.Column([
+                            
+                                ft.TextField(hint_text=" E-mail", prefix_icon=ft.icons.EMAIL_OUTLINED,border_radius=30, color="#66a1ff", border_color="#555657",),
+                                ft.TextField(hint_text=" Sua senha", password=True, can_reveal_password=True,prefix_icon=ft.icons.LOCK_OUTLINE_ROUNDED,border_radius=30, border_color="#555657")
+                                     ])),                         
+                                ft.FilledButton(content=ft.Text('Entrar'),
+                                                  width=100, height=45, 
+                                                  style=ft.ButtonStyle(
+                                                      bgcolor='#52498C',
+                                                      ),on_click= lambda e:entrar(e)),
+                        
+                        
+                        ft.CupertinoButton(text='Esqueci minha senha',padding=1, color='#120f26',width=500,min_size=20,on_click=True),
+
+                                ],spacing=40,horizontal_alignment=ft.CrossAxisAlignment.CENTER,alignment=ft.MainAxisAlignment.CENTER)
+                        ),
+
+            ft.Container(
+                width='610',
+                height='540',
+                
+                content= ft.Column([
+
+        #chamando imagem
+
+                        ft.Image(src="grafico-de-barras.png",width=300,height=300),
+                        ft.Text("A melhor experiência de login\n" "  que você já teve na sua vida.",size=20,color="#ffffff", font_family="RobotoSlab",
+                                weight=ft.FontWeight.W_700,)
+
+                                ],spacing=50, horizontal_alignment=ft.CrossAxisAlignment.CENTER,alignment=ft.MainAxisAlignment.CENTER)
+            
+                        )
+])
+    cadastro =  ft.Container(
+                bgcolor="#ffffff",
+                width='1200',
+                height='260',
+                border_radius=10,
+                padding=30,
+                content=ft.Column([
+
+                        ft.Text('Dados do Usuário:', size=25, color ='#120F26', font_family="RobotoSlab",
+                weight=ft.FontWeight.W_500),
+
+                ft.Row([
+                        ft.TextField(label="CPF",border_radius=5, color="#000000", border_color="#000000",value=" ", width=200),
+                        ft.TextField(label="Nome Completo",border_radius=5, color="#000000", border_color="#000000",value=" ", width=500),
+
+
+                ]),      
+                ft.Row([
+                         ft.TextField(label="Nome Da Mãe",border_radius=5, color="#000000", border_color="#000000",value=" ", width=500),
+                         ft.TextField(label="Data De Nascimento",border_radius=5, color="#000000", border_color="#000000",value=" ", width=200),
+
+                        ft.FilledButton( content=ft.Text('Voltar'),
+                                                  width=100, height=45, 
+                                                  style=ft.ButtonStyle(
+                                                      bgcolor='#52498C',
+                                                  ),on_click= lambda e:voltar(e))
+                ]),
+  ])
+                
+)
+    
+    def entrar(e: ft.ControlEvent):
+    
+        page.remove(r1)
+        page.add(cadastro, tabela)
+
+    def voltar(e: ft.ControlEvent):
+
+        page.remove(cadastro, tabela)
+        page.add(r1)
+
+
+    #def validaracesso(e: ft.ControlEvent):
+
+    tabela =  ft.Container(
+                bgcolor="#ffffff",
+                width='1200',
+                height='260',
+                border_radius=10,
+                padding=30,
+                content=ft.Column([
+ 
+
+                ft.DataTable(
+                    columns=[
+                        ft.DataColumn(ft.Text("First name")),
+                        ft.DataColumn(ft.Text("Last name")),
+                        ft.DataColumn(ft.Text("Age"), numeric=True),
+            ],  width=1200,
+            rows=[
+                ft.DataRow(
+                    cells=[
+                        ft.DataCell(ft.Text("John")),
+                        ft.DataCell(ft.Text("Smith")),
+                        ft.DataCell(ft.Text("43")),
+                    ],
+                ),
+                ft.DataRow(
+                    cells=[
+                        ft.DataCell(ft.Text("Jack")),
+                        ft.DataCell(ft.Text("Brown")),
+                        ft.DataCell(ft.Text("19")),
+                    ],
+                ),
+                ft.DataRow(
+                    cells=[
+                        ft.DataCell(ft.Text("Alice")),
+                        ft.DataCell(ft.Text("Wong")),
+                        ft.DataCell(ft.Text("25")),
+                    ],
+                ),
+            ],
+        ),
+
+
+
+  ])
+                
+)
+
+    page.add(r1)
+ft.app(main)
