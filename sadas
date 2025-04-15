@@ -1,0 +1,67 @@
+import flet as ft
+
+def main(page: ft.Page):
+    page.bgcolor = "#FFFFFF"
+    page.window_center()
+    page.window_width = '1200'
+    page.window_height = '650'
+    page.window_resizable = False
+    page.window_maximizable = False
+    page.window_title_bar_hidden = True
+    page.padding=0
+    c1= ft.Container(height=650, width=200,bgcolor="#000000",padding=10,
+                    content=ft.Column( [
+                        ft.Row([
+                        ft.IconButton(ft.icons.HOME, icon_color="#ffffff",on_click=True, icon_size=30),
+                        ft.Text("Inicio", color="#ffffff"),
+                                ]),
+
+                        ft.Row([
+                        ft.IconButton(ft.icons.PEOPLE, icon_color="#ffffff",on_click=True, icon_size=30),
+                        ft.Text("Alunos", color="#ffffff"),
+
+                                ]),
+                        ft.Row([
+                        ft.IconButton(ft.icons.FAMILY_RESTROOM, icon_color="#ffffff",on_click=True, icon_size=30),
+                        ft.Text("Responsáveis", color="#ffffff"),
+
+                        ]),
+                        ft.Row([
+                        ft.IconButton(ft.icons.ATTACH_MONEY, icon_color="#ffffff",on_click=True, icon_size=30),
+                        ft.Text("Financeiro", color="#ffffff"),
+
+                        ]),
+                        
+
+                        ft.Row([
+                        ft.IconButton(ft.icons.SCHOOL, icon_color="#ffffff",on_click=True, icon_size=30),
+
+                        ft.Text("Turmas", color="#ffffff"),
+                                ]),
+
+                        ft.Row([
+                        ft.IconButton(ft.icons.MENU_BOOK_SHARP, icon_color="#ffffff",on_click=True, icon_size=30),
+                        ft.Text("Disciplinas", color="#ffffff"),
+                                ]),
+
+                        ft.Container(height=180),
+                        ft.Divider(color="#ffffff"),
+                        ft.Row([
+                        ft.IconButton(ft.icons.EXIT_TO_APP, icon_color="#ffffff",on_click=lambda e:sair(e), icon_size=30),
+                        ft.Text("Sair", color="#ffffff"),
+])
+                                    ],
+
+                                    )   
+                    )
+    
+
+    def sair(e):
+        page.window_close()
+
+        page.update()
+
+
+
+    page.add(c1)
+ft.app(main)
