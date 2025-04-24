@@ -1,0 +1,120 @@
+from flet import*
+
+
+def main(page: Page):
+    page.window.center()
+    page.window.width = '800'
+    page.window.height = '500'
+    page.padding= 0
+    page.window.maximizable = False
+    page.window.resizable = False
+    
+
+
+
+    #Logica de transição de página
+    def um(e):
+        telalogin.visible=True
+        telacadastro.visible=False
+        telalogin.transform.Offset(0, 0)
+
+        page.update()
+
+    def dois(e):
+        telacadastro.visible=True
+        telalogin.visible=False
+        page.update()
+
+    #Objetos tela de login 
+
+    tlogin=Text("Login", size=35, weight="Bold",)
+
+
+    tacresent=Text("Ou faça login no seu email", size=15)
+
+
+    tacresent2=CupertinoButton(text="Esqueci minha senha",color=colors.BLACK)
+
+
+    textoemail=TextField(label= "E-mail", border_radius=15,autofocus=True, border_color="Black",cursor_color=colors.BLACK,label_style=TextStyle(color=colors.BLACK), )
+
+
+    textosenha=TextField(label= "Senha", border_radius=15, border_color="Black",cursor_color=colors.BLACK,label_style=TextStyle(color=colors.BLACK),password=True,can_reveal_password=True )
+    
+    
+    botaologin=FilledButton(text="Login", on_click=dois,style=ButtonStyle(bgcolor=colors.BLACK))
+
+
+    iconegoogle=Image(src="iconegoogle.png",width=25,height=25,
+                        fit=ImageFit.COVER)
+    
+    iconefacebook=Image(src="facebook.png",width=25, height=25,
+                        fit=ImageFit.COVER
+    )
+    iconegithub=Image(src="github.png",width=25, height=25,
+                        fit=ImageFit.COVER
+    )
+    iconelikedin=Image(src="linkedin.png",width=25, height=25,
+        fit=ImageFit.COVER
+    )
+
+    #Objetos tela de cadastro
+    botaocadastro=FilledButton(text="Login", on_click=um)
+
+
+
+
+
+
+
+
+    r1=Row([iconegoogle,iconefacebook, iconegithub,iconelikedin],alignment=MainAxisAlignment.CENTER,
+        spacing=20)
+    #Container de construção
+    telalogin=Row([
+
+            Container(width=395, height=495,padding=50,content=
+
+                      
+                      Column([tlogin,r1,tacresent,textoemail, textosenha,tacresent2,botaologin
+                              
+                              ],alignment=MainAxisAlignment.CENTER, horizontal_alignment=CrossAxisAlignment.CENTER)
+                      ),
+
+            Container(width=395, height=495, bgcolor="black", border_radius=border_radius.only(top_left=170, bottom_left=170,        
+                    offset=transform.Offset(2, 0),
+                    animate_offset=animation.Animation(1000),),
+                      content=Column([
+                              
+                              ],alignment=MainAxisAlignment.CENTER, horizontal_alignment=CrossAxisAlignment.CENTER)
+                      )
+    
+    ])
+
+    telacadastro=Row([
+
+            Container(width=395, height=495, bgcolor="black",border_radius=border_radius.only(top_right=170, bottom_right=170),
+                      
+                      content=Column([
+                              
+                              ],alignment=MainAxisAlignment.CENTER, horizontal_alignment=CrossAxisAlignment.CENTER)
+                      ),
+
+            Container(width=395, height=495,content=
+                      
+                      Column([botaocadastro
+                              
+                              ],alignment=MainAxisAlignment.CENTER, horizontal_alignment=CrossAxisAlignment.CENTER)
+                      
+                      
+                      
+                      )
+    
+    ])
+    
+    
+    
+    
+    page.add(telalogin,telacadastro)
+
+app(main)
