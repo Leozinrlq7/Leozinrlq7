@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>QUIZ</title>
+</head>
+<body>
+  
+    
+  <div class="container">
+    <div class="img"></div>
+    <div class="bolha"></div>
+    <div class="bolha2"></div>
+    <div class="bolha3"></div>
+    <div class="bolha4"></div>
+    <div class="bolha5"></div>
+    <div class="bolha6"></div>
+    <div class="bolha7"></div>
+    <div class="bolha8"></div>
+  </div>
+
+
+   
+</body>
+</html>
+
+
+............................................................................................................................................................
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    background-color: hsl(215, 70%, 32%);
+    
+}
+
+.container{
+    width: auto;
+    height: 800px;
+    background-color: hsl(210, 33%, 99%);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    z-index: 0;
+    
+}
+
+.img{
+   width: 400px;
+  height: 150px;
+  background-image: url(logo.png);
+  background-repeat: no-repeat;
+  background-color: hsl(0, 0%, 100%);
+
+}
+    
+
+.bolha{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 10%;
+}
+
+.bolha2{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    left: 20%;
+    animation: floatUp 5s linear infinite;
+    
+}
+
+.bolha3{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 30% ;
+}
+
+
+
+.bolha4{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 40% ;
+}
+.bolha5{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 50% ;
+}
+.bolha6{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 60% ;
+}
+.bolha7{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 70% ;
+}
+.bolha8{
+    position: absolute;
+    bottom: -100px;
+    width: 75px;
+    height: 75px; 
+    border-radius: 50px;
+    position: absolute;
+    animation: floatUp 5s linear infinite;
+    left: 80% ;
+}
+
+
+@keyframes floatUp {
+    0% {
+     transform: translateY(0) scale(1);
+     opacity: 0.4;
+    }
+    100% {
+     transform: translateY(-120vh) scale(1.2);
+     opacity: 0;
+    }
+}
