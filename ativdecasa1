@@ -1,0 +1,120 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+img{
+    width: 100px;
+    height: 120px;
+    padding: 10px;
+}
+.image{
+    width: 600px;
+    height: 500px;
+}
+.paddingimg{
+    padding: 200px;
+}
+a{       
+    text-decoration: none;
+    font-family: Impact, fantasy, Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    padding: 5px;
+}
+.botao{
+
+    padding: 200px;
+
+
+}
+.plano{
+    word-spacing: 1px;
+    padding: 10px;
+    border-radius: 10px;
+    border-color: rgb(255, 49, 49);
+    background-color: rgb(255, 49, 49);
+    color: white;
+}
+
+.principal{
+    width: 100%;
+    height: 140px;
+    position: fixed;
+    background: #0080ff22;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+
+.home{
+    width: 100%;
+    height: 910px;
+    background: rgb(0, 56, 117);
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+
+
+
+.becoders{
+    margin-bottom: .5rem;
+    font-family: Lato, sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    font-weight: 700;
+    color: white;
+    word-spacing: 5%;
+    padding-left: 100px;
+    size: 20px;
+}
+
+
+.servicos{
+    width: 100%;
+    height: 910px;
+    background: green;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.projetos{
+    width: 100%;
+    height: 910px;
+    background: rgb(0, 0, 0);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.feedbacks{
+    width: 100%;
+    height: 910px;
+    background: rgb(244, 255, 244);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sobre{
+    width: 100%;
+    height: 910px;
+    background: rgb(30, 37, 30);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.contato{
+    text-align: center;
+    background-color: rgb(168, 83, 83);
+    color: white;
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
