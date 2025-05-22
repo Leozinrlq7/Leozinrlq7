@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title class="titulo">VN - VASCO NEWS</title>
+    
+</head>
+<body>
+    <header class="principal">
+        <div class="paddingimg">
+        <img src="CRVascodaGama.png" alt="">
+        </div>
+        <li><a href="servicos">Serviços </a></li>
+        <li><a href="portfolio">Portfolio </a></li>
+        <li><a href="sobre">Sobre</a></li>
+        <li><a href="contato">Contato</a></li>
+        <div class="botao">
+        <button class="plano">FAZER ORÇAMENTO</button>
+        </div>
+    </header>
+
+    <div class="home">
+        <ul>
+        <p class="becoders">
+          BeCoders Consulting
+        </p>
+        <img class="image" src="img-header-CuexORkr.png" alt="">
+    </ul>
+    </div>
+    
+
+    <div class="servicos">
+
+
+
+    </div>
+    
+
+    <div class="projetos">
+
+    </div>
+    
+
+    <div class="feedbacks">
+
+    </div>
+
+
+    <div class="sobre">
+
+    </div>
+
+
+    <footer class="contatos">
+
+
+    </footer>
+
+</body>
+</html>
