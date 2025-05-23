@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title class="titulo">PORTFÓLIO</title>
+    
+</head>
+<body>
+    <header class="principal">
+        <div class="paddingimg">
+        <img class="logo1" src="logo2.png" alt="">
+        </div>
+        <li><a href="servicos">Serviços </a></li>
+        <li><a href="portfolio">Portfolio </a></li>
+        <li><a href="sobre">Sobre</a></li>
+        <li><a href="contato">Contato</a></li>
+        <div class="divbotao">
+        <button class="botao">FAZER ORÇAMENTO</button>
+        </div>
+    </header>
+
+    <div class="home">
+        <ul>
+                <p class="texto1">
+                    Idéias totalmente  criativas,<br>  Ideal para seu Site
+                </p>
+                <img class="logo2" src="logo2.png" alt="">
+        </ul>
+        <div class="divbotao2">
+            <button class="botao2"> FAZER ORÇAMENTO</button>
+        </div>  
+    </div>
+    
+    <hr>
+
+    <div class="servicos">
+        <h2>Soluções Digitais</h2>
+        <p>Crio sites modernos, responsivos e com identidade visual marcante. Transformo ideias em realidade digital.</p>
+
+
+    </div>
+    
+
+    <div class="projetos">
+
+    </div>
+    
+
+    <div class="feedbacks">
+
+    </div>
+
+
+    <div class="sobre">
+
+    </div>
+
+
+
+  <footer id="contato" class="contatos">WHATSAPP = 279966969</footer>
+
+</body>
+</html>
