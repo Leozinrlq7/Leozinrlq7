@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PORTFÓLIO</title>
+</head>
+<body>
+    <header class="principal">
+        <div class="paddingimg">
+            <img class="logo1" src="logo2.png" alt="">
+        </div>
+
+        <li><a href="servicos">Serviços </a></li>
+        <li><a href="portfolio">Portfolio </a></li>
+        <li><a href="sobre">Sobre</a></li>
+        <li><a href="contato">Contato</a></li>
+
+        <div class="divbotao">
+            <button class="botao">FAZER ORÇAMENTO</button>
+        </div>
+    </header>
+
+    <section class="home">
+        <ul>
+            <p class="texto1">
+                Idéias totalmente criativas,<br> Ideal para seu Site
+            </p> <br>
+            <h5 class="texto2">Oferecemos sites com design exclusivo e suporte 24 horas, garantindo uma experiência única.</h5>
+            <div class="divbotao2">
+                <button class="botao2"> FAZER ORÇAMENTO</button>
+            </div>
+        </ul>
+
+        <div class="divimg">
+            <img class="logo2" src="logo2.png" alt="">
+        </div>  
+    </section>
+        <div class="opcoes">
+            <ul class="suporte24h">
+                <li><a href="">Equipe Especializada </a></li>
+                <li><a href="">Design Exclusivo </a></li>
+                <li><a href="">Suporte 24 Horas</a></li>
+            </ul>
+        </div>
+
+    <hr>
+
+    <section class="servicos">        
+           <div >
+                <div class="divservicos">
+                    <h1>Serviços Que Oferecemos.</h1><br>
+                    <h5>Mostramos nossas soluções digitais, incluindo sites, e-commerce, aplicações web e dashboards. Descubra como podemos transformar sua visão em realidade.</h5>
+
+                </div>
+         <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Landing Pages</h2>
+          <p>
+            São páginas focadas em conversão, projetadas <br>para capturar leads,
+            aumentar vendas ou  <br> direcionar ações.Criamos Landing Pages
+            personalizadas <br> que combinam design e <br> estratégia para gerar
+            resultados.
+           </div>
+                    <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Landing Pages</h2>
+          <p>
+            São páginas focadas em conversão, projetadas <br>para capturar leads,
+            aumentar vendas ou  <br> direcionar ações.Criamos Landing Pages
+            personalizadas <br> que combinam design e <br> estratégia para gerar
+            resultados.
+          </p>
+           </div>
+                    <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Landing Pages</h2>
+          <p>
+            São páginas focadas em conversão, projetadas <br>para capturar leads,
+            aumentar vendas ou  <br> direcionar ações.Criamos Landing Pages
+            personalizadas <br> que combinam design e <br> estratégia para gerar
+            resultados.
+          </p>
+           </div>
+                    <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Landing Pages</h2>
+          <p>
+            São páginas focadas em conversão, projetadas <br>para capturar leads,
+            aumentar vendas ou  <br> direcionar ações.Criamos Landing Pages
+            personalizadas <br> que combinam design e <br> estratégia para gerar
+            resultados.
+          </p>
+           </div>
+           
+           
+    </section>
+
+    <section class="projetos">
+        <!-- Conteúdo de projetos aqui -->
+    </section>
+
+    <section class="feedbacks">
+        <!-- Conteúdo de feedbacks aqui -->
+    </section>
+
+    <section class="sobre">
+        <!-- Conteúdo sobre aqui -->
+    </section>
+
+    <footer id="contato" class="contatos">
+        WHATSAPP = 279966969
+    </footer>
+</body>
+</html>
