@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>PORTFÓLIO</title>
+</head>
+<body>
+    <header class="principal">
+        <div class="paddingimg">
+            <a href=""><img class="logo1" src="logo_leao-removebg-preview.png" alt=""></a>
+        </div>
+            <li><a href="servicos">Serviços </a></li>
+            <li><a href="portfolio">Portfolio </a></li>
+            <li><a href="sobre">Sobre</a></li>
+            <li><a href="contato">Contato</a></li>
+
+    <div class="divbotao">
+            <button class="botao">FAZER ORÇAMENTO</button>
+        </div>
+    </header>
+
+    <section class="home">
+        <ul>
+            <p class="texto1">
+                Idéias totalmente criativas,<br> Ideal para seu Site
+            </p> <br>
+            <h5 class="texto2">Oferecemos sites com design exclusivo e suporte 24 horas, garantindo uma experiência única.</h5>
+            <div class="divbotao2">
+                <button class="botao2"> FAZER ORÇAMENTO</button>
+            </div>
+        </ul>
+
+        <div class="divimg">
+            <img class="logo2" src="logo_leao-removebg-preview.png" alt="">
+        </div>
+    </section>
+        <div >
+            <ul class="suporte24h">
+                    <img class="imgsup"  src="download.png" alt="">
+                <li><a>Equipe Especializada </a></li>
+                    <img src="download.png" alt="">
+                <li><a>Design Exclusivo </a></li>
+                    <img src="download.png" alt="">
+                <li><a>Suporte 24 Horas</a></li>
+            </ul>
+        </div>
+    <hr>
+
+    <section class="servicos">
+           <div class="divservicos1">
+                <div class="divservicos">
+                    <h1>Serviços que Oferecemos.</h1><br>
+                    <h5>Mostramos nossas soluções digitais, incluindo sites, e-commerce, aplicações web
+                        e dashboards. Descubra como podemos transformar sua visão em realidade.</h5>
+
+                </div>
+
+            <div class="container-landing">
+         <div class="landingpage">
+          <h2 class="textos">Landing Pages</h2>
+          <p>
+            São páginas focadas em conversão, projetadas para capturar leads,
+            aumentar vendas ou direcionar ações.Criamos Landing Pages
+            personalizadas que combinam design e estratégia para gerar
+            resultados.
+           </div>
+           <div class="landingpage">
+          <h2 class="textos">Design exclusivo</h2>
+          <p>
+        Oferecemos sites com design exclusivo,
+         combinando estética e funcionalidade para
+         destacar a singularidade do seu negócio,
+          desenvolvida sob medida para suas necessidades.
+          </div>
+                      <div class="landingpage">
+          <h2 class="textos">Sites Institucionais</h2>
+          <p>
+           Sites Institucionais são o cartão de
+           visita digital da sua empresa, apresentando
+           sua marca e serviços de forma profissional.
+           criamos sites que reforçam a credibilidade do
+            seu negócio.
+           </div>
+                      <div class="landingpage">
+          <h2 class="textos">Aplicações Web</h2>
+          <p>
+            São sistemas interativos acessíveis via navegador.
+            desenvolvemos soluções personalizadas, focadas em
+            desempenho e usabilidade para empresas que buscam
+            eficiência e serviços online robustos.
+           </div>
+           <div class="landingpage">
+          <h2 class="textos">e-commerce</h2>
+          <p>
+           É ideal para vender produtos virtuais
+            como eBooks e cursos online. Criamos
+             lojas virtuais personalizadas para
+             ampliar o alcance e otimizar a venda
+             de seus conteúdos digitais.
+           </div>
+                    <div class="landingpage">
+          <h2 class="textos">Dashboards</h2>
+          <p>
+            São painéis interativos que transformam
+             dados em informações visuais. Criamos
+              dashboards personalizados para facilitar
+              o monitoramento e a tomada de decisões.
+          </p>
+           </div>
+                    <div class="landingpage">
+          <h2 class="textos">Consultoria</h2>
+          <p>
+            Oferecemos consultoria especializada
+             para empresas que precisam de suporte
+              em projetos específicos. Ajudamos a
+               identificar soluções, otimizar processos
+                e alcançar resultados.
+          </p>
+           </div>
+                    <div class="landingpage">
+          <h2 class="textos">Mentoria</h2>
+          <p>
+            Oferecemos mentoria para ensinar
+             como vender e criar sites.
+             Guiamos você no desenvolvimento
+             de habilidades essenciais para o
+             sucesso online, desde estratégias
+             de vendas até técnicas de criação de
+             sites eficazes.
+          </p>
+           </div>
+
+           </div>
+    </section>
+        <hr>
+    <section class="projetos">
+        <div class="divprojetos">
+        <h1 class="projetosrealizadosh1"> Projetos Realizados.
+        </h1>
+        <p class="projetosrealizadosparagrafo">
+          Apresentamos uma seleção dos nossos <br>
+          trabalhos mais impactantes, <br>
+          destacando nossa capacidade de transformar <br> ideias em soluções
+          digitais de sucesso.
+        </p>
+        <div class="projetosrealizados">
+                            <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Dashboards</h2>
+          <p>
+            São painéis interativos que transformam
+             dados em informações visuais. Criamos
+              dashboards personalizados para facilitar
+              o monitoramento e a tomada de decisões.
+          </p>
+           </div>
+                    <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Consultoria</h2>
+          <p>
+            Oferecemos consultoria especializada
+             para empresas que precisam de suporte
+              em projetos específicos. Ajudamos a
+               identificar soluções, otimizar processos
+                e alcançar resultados.
+          </p>
+           </div>
+                    <div class="landingpage">
+          <img class="imagemvasco" src="logo2.png" alt="">
+          <h2 class="textos">Mentoria</h2>
+          <p>
+            Oferecemos mentoria para ensinar
+             como vender e criar sites.
+             Guiamos você no desenvolvimento
+             de habilidades essenciais para o
+             sucesso online, desde estratégias
+             de vendas até técnicas de criação de
+             sites eficazes.
+          </p>
+           </div>
+      </div>
+        </div>
+    </section>
+    <hr>
+<!--
+    <section class="feedbacks">
+        Conteúdo de feedbacks aqui
+     </section> -->
+
+    <!-- <section class="sobre">
+        
+    </section> -->
+
+    <footer id="contato" class="contato">
+        <div>
+        Copyright © 2025 BeCoders. Todos os direitos reservados. <br>
+            CNPJ: 60.583.014/0001-07</div>
+    </footer>
+</body>
+</html>
