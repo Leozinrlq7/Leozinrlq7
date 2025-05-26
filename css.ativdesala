@@ -1,0 +1,241 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+.logo1{
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+}
+
+.paddingimg{
+    
+    padding: 200px;
+
+
+}
+a{       
+    text-decoration: none;
+    font-family: Impact, fantasy, Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    padding: 5px;
+}
+.divbotao{
+
+    padding: 200px;
+
+
+}
+divimg
+.botao{
+    background-color: rgb(170, 170, 170);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: Lato, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 900;
+    word-spacing: 1px;
+}
+.botao:hover{
+    background-color: gold;
+}
+.principal{
+    width: 100%;
+    height: 140px;
+    position: fixed;
+    background: #000000;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+
+.home{
+    width: 100%;
+    height: 910px;
+    background: #111111;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+
+
+
+.texto1{
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    padding-left: 100px;
+    line-height: 50px;
+    margin-bottom: 0; 
+}
+.texto2{
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding-left: 100px;
+    margin-bottom: 0; 
+}
+ul{
+    padding-left: 100px;
+}
+.divbotao2{
+    padding-left: 150px;
+    padding-top: 50px;
+}
+.logo2{
+    width: 300px;
+    height: 300px;
+}
+.botao2{
+        background-color: rgb(170, 170, 170);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    word-spacing: 1px;
+
+}
+.botao2:hover {
+    background-color: gold;
+}
+.divimg{
+    padding-left: 300px;
+}
+
+.suporte24h{
+    padding: auto;
+    background-color: #111111;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 300px; /* espaço entre os <li> */
+    padding: 20px;
+    margin: 0;
+}
+
+.servicos{
+    width: 100;
+    height: 1290px;
+    background: #111111;
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 30px;
+    justify-content: center;
+    padding: 10px;
+}
+
+    
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.divservicos{
+    width: 250px;
+    height: 250px;
+    padding-left: 0px;
+}
+.imagemvasco{
+    width: 200px;
+    height: 200px;
+}
+.textos{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.container-landing {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px;
+    padding: 40px 20px;
+    justify-items: center;
+}
+.landingpage{
+
+    padding: 10px;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: white;
+    justify-content: center;
+}
+
+p {
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.1rem;
+    color: #f8f8f8;
+    line-height: 1.6rem;
+}
+.projetos{
+    width: 100%;
+    height: 910px;
+    background: rgb(0, 0, 0);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.divprojetos{
+    padding-left: 200px;
+}
+.projetosrealizados{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px;
+    padding: 40px 20px;
+    justify-items: center;
+}
+.feedbacks{
+    width: 100%;
+    height: 910px;
+    background: rgb(244, 255, 244);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sobre{
+    width: 100%;
+    height: 910px;
+    background: rgb(30, 37, 30);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.contato{
+    text-align: center;
+    background-color: rgb(168, 83, 83);
+    color: rgb(0, 0, 0);
+    height: 180px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
