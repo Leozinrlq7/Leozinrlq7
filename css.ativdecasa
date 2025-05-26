@@ -1,0 +1,278 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+
+.logo1{
+    width: 130px;
+    height: 130px;
+    padding: 10px;
+}
+
+.paddingimg{
+    padding-left: 200px;
+    padding-right: 200px;
+}
+a{       
+    text-decoration: none;
+    font-family: Impact, fantasy, Arial, Helvetica, sans-serif;
+    color: aliceblue;
+    padding: 5px;
+}
+.divbotao{
+
+    padding: 200px;
+
+
+}
+img{
+    width: 50px;
+    height: 50px;
+}
+.botao{
+    background-color: rgb(170, 170, 170);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: Lato, sans-serif;
+    font-size: 0.9rem;
+    font-weight: 900;
+    word-spacing: 1px;
+}
+.botao:hover{
+    background-color: gold;
+}
+.principal{
+    width: 100%;
+    height: 140px;
+    position: fixed;
+    background: #090814;
+    backdrop-filter: blur(20px);
+    align-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+}
+
+
+.home{
+    width: 100%;
+    height: 910px;
+    background:  #1A1B26;
+    align-items: center;
+    display: flex;
+    justify-content: left;
+}
+
+
+
+.texto1{
+    font-family: Lato, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: white;
+    padding-left: 100px;
+    line-height: 50px;
+    margin-bottom: 0; 
+}
+.texto2{
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    padding-left: 100px;
+    margin-bottom: 0; 
+}
+li{
+   color: #090814;
+   font-size: 1.8rem;
+}
+
+ul{
+    
+    padding-left: 100px;
+}
+.divbotao2{
+    padding-left: 150px;
+    padding-top: 50px;
+}
+.logo2{
+    width: 300px;
+    height: 300px;
+}
+.botao2{
+        background-color: rgb(170, 170, 170);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-family: Lato, sans-serif;
+    font-size: 1.4rem;
+    font-weight: 900;
+    word-spacing: 1px;
+
+}
+.botao2:hover {
+    background-color: gold;
+}
+.divimg{
+    padding-left: 300px;
+}
+
+.suporte24h{
+
+    font-size: 22px;
+    background-color: #1A1B26;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    gap: 30px; /* espaço entre os <li> */
+
+}
+
+.servicos{
+    width: 100;
+    height: 1290px;
+    background: #1A1B26;
+    display: flex;
+    justify-content: left;
+    padding-left: 100px;
+    padding-top: 100px;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 2.5rem;
+}
+
+    
+h5{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+.divservicos{
+    width: 300px;
+    height: 300px;
+    padding-left: 25px;
+    padding: 10px;
+}
+.divservicos1{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.imagemvasco{
+    width: 200px;
+    height: 200px;
+}
+.textos{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+}
+.container-landing {
+    width: 100%;
+    height: 350px;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr); /* 4 colunas */
+    gap: 50px;
+    padding: 20px;
+    padding-right: 100px;
+    justify-content: center;
+    list-style-type: none;
+}
+.landingpage {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    background-color:#F2C12E;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    border: 2px solid #383838;
+    box-shadow: 4px 5px 0px 0px #383838;
+}
+
+.landingpage h2 {
+    font-size: 1.4rem;
+    color: #1A1B26;
+    margin-bottom: 10px;
+}
+.landingpage p {
+    font-size: 0.95rem;
+    color: #1A1B26;
+    line-height: 1.4rem;
+}
+.projetos{
+    width: 100%;
+    height: 910px;
+    background-color: #1A1B26;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.divprojetos{
+    padding-left: 200px;
+}
+.projetosrealizadosparagrafo{
+    font-family: Lato, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    color: white;
+    margin-bottom: 0; 
+    padding: 30px;
+} 
+.projetosrealizadosh1{
+    padding-left: 25px;
+   font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 1.8rem;
+}
+.projetosrealizados{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px;
+    padding-left: 200px;
+    align-items: center;
+    justify-content: center;
+}
+.feedbacks{
+    width: 100%;
+    height: 910px;
+    background: rgb(244, 255, 244);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.sobre{
+    width: 100%;
+    height: 910px;
+    background: rgb(30, 37, 30);
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+.contato{
+    text-align: center;
+    background-color: #1A1B26;
+    color: rgb(255, 255, 255);
+    height: 120px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
