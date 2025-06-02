@@ -1,0 +1,76 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 30px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.divusuario{
+    display: flex;
+    flex-direction: column;
+}
+.divsenha{
+    display: flex;
+    flex-direction: column;
+}
+.divbotao{
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+  padding: 20px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 15px;
+  font-size: 1.2rem;
+}
+::placeholder{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    font-weight: 550;
+}
+.botao {
+  padding: 20px;
+  background-color: #313236;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.botao:hover {
+  background-color: rgb(141, 141, 141);
+  color: #121315;
+}
+a{
+    
+    padding-top: 30px;
+    color: #000000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+a:hover{
+    color: rgb(0, 0, 133);
+}
