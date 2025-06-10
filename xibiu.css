@@ -1,0 +1,89 @@
+body {
+  background-color: #f0f2f5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+input{
+  width: 250px;
+  height: 50px;
+  border-radius: 10px;
+  border-color: rgb(214, 214, 214);  
+}
+div{
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 25px 30px rgba(0,0,0,0.1);
+  width: 270px;
+  height: 400px;
+  line-height: 65px;
+  
+}
+.c{
+  width: 130px;
+  height: 60px;
+  background-color: rgb(255, 82, 82);
+  color: #f0f2f5;
+  border: none;
+  border-radius: 10px;
+}
+button{
+  background-color: rgb(235, 235, 235);
+  color: #282828;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+.igual{
+  width: 130px;
+  height: 60px;
+  background-color: rgb(0, 144, 17);
+  color: #f0f2f5;
+  border: none;
+  border-radius: 10px;
+}
+.porcento{
+  background-color: rgb(255, 162, 0);
+  color: #d7d7d7;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+.divisao{
+  background-color: rgb(255, 162, 0);
+  color: #d7d7d7;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+.mult{
+  background-color: rgb(255, 162, 0);
+  color: #d7d7d7;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+.menos{
+  background-color: rgb(255, 162, 0);
+  color: #d7d7d7;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
+.mais{
+  background-color: rgb(255, 162, 0);
+  color: #d7d7d7;
+  border: none;
+  border-radius: 10px;
+  width: 60px;
+  height: 60px;
+}
