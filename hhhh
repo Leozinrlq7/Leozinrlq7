@@ -1,0 +1,67 @@
+import React from 'react';
+import { Text,SafeAreaView,TouchableOpacity, StyleSheet, TextInput } from 'react-native';
+
+export default function App(){
+ return (
+  <SafeAreaView style={styles.index}> 
+    <Text style={styles.titulo}> CALCULADORA IMC </Text>
+    <TextInput
+    style={styles.peso}
+    placeholder = "EXEMPLO: 66"
+    
+    />
+  <TextInput
+
+
+    style={styles.altura}
+    placeholder = "EXEMPLO: 1,70"
+    
+    />
+
+
+  <TouchableOpacity
+      style={styles.btn}
+
+
+  />
+  </SafeAreaView>
+
+
+
+
+
+
+ );
+
+}
+
+
+const styles = StyleSheet.create({
+  index:{
+
+    flex: 1,
+    backgroundColor : "#575657",
+    justifyContent : "center",
+
+  },
+  titulo:{
+    fontSize: 30,
+    fontWeight : "bold",
+    textAlign : "center",
+    color: "#ffffff"
+  },
+  peso:{
+    padding : 10,
+    borderWidth: 1,
+    borderRadius : 10,
+  },
+altura:{
+    padding : 10,
+    borderWidth: 1,
+    borderRadius : 10,
+},
+btn:{
+  backgroundColor: "red",
+}
+
+});
