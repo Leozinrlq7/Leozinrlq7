@@ -1,0 +1,120 @@
+import {SafeAreaView,View, Text,StyleSheet} from 'react-native';
+
+export default function App(){
+  return (
+    <SafeAreaView style = {styles.container}>
+        <View style={styles.c1}>
+
+            <View style={styles.user}>
+                
+            </View>
+
+            <Text style={styles.text1}>Olá, Maria</Text>
+
+        </View>
+
+        <View style={styles.c2}>
+
+            <View style={styles.valor}>
+                <Text style={styles.text}>Conta </Text>
+                <Text style={styles.text}> R$1.356,98 </Text>
+            </View>
+         
+        </View>
+
+        <View style={styles.c3}>
+
+           
+                <View style={styles.opcao}>
+                
+                </View>
+                
+
+                <View style={styles.opcao}>
+                
+                </View>
+
+                <View style={styles.opcao}>
+                
+                </View>
+
+                <View style={styles.opcao}>
+                
+                </View>
+
+                <View style={styles.opcao}>
+                
+                </View>
+            
+         
+        </View>
+        
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+
+  container:{
+    flex: 1,
+    backgroundColor: '#ffffff',
+    padding: 0,
+  },
+
+  c1:{
+    backgroundColor: '#8b1ccc',
+    width: 'auto',
+    height: 220
+  },
+
+  user:{
+    backgroundColor: '#ffffff',
+    width: 50,
+    height: 50,
+    borderRadius:100
+  },
+
+  c2:{
+    backgroundColor: '#ffffff',
+    width: 'auto',
+    height: 100,
+  },
+
+  c3:{
+    backgroundColor: '#ffffff',
+    width: 'auto',
+    height: 100,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: 15
+
+
+  },
+  opcao:{
+    backgroundColor: '#DCDCDC',
+    width: 60,
+    height: 60,
+    borderRadius:100
+  },
+
+  valor:{
+    gap: 10,
+    padding: 19
+
+  },
+
+  text:{
+    fontSize:20, 
+    fontWeight: 'bold'
+
+  },
+
+  text1:{
+    color: '#FFFFFF',
+    fontSize:20, 
+    fontWeight: 'bold'
+
+  },
+
+});
