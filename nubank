@@ -1,0 +1,316 @@
+import { 
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  StyleSheet,
+  View,
+  Image
+} from 'react-native';
+
+export default function App() {
+  return (
+    <SafeAreaView style={styles.index}> 
+
+      <View style={styles.topbar}></View>
+
+      <View style={styles.pf2}>
+      <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/128/4298/4298863.png' }}style={[styles.icon10,{ tintColor: '#ffffff' }]}/>
+      <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/128/3489/3489191.png' }}style={[styles.icon10,{ tintColor: '#ffffff' }]}/>
+      <Image source={{ uri: 'https://cdn-icons-png.flaticon.com/128/7544/7544411.png' }}style={[styles.icon10,{ tintColor: '#ffffff' }]}/>
+      
+      </View>
+       
+      <View style={styles.c1}>
+      <View style={styles.topbar1}></View>
+      <TouchableOpacity style={styles.pf}>
+      <Image 
+      source={{ uri: 'https://i.postimg.cc/LXr7h1Ng/depositphotos-232864112-stock-illustration-simple-person-icon-linear-symbol-removebg-preview-1.png'}}         style={styles.icon7}
+      />
+       </TouchableOpacity>
+      <Text style={styles.hello}> Olá, Davi</Text>
+      </View>
+
+      <View style={styles.c2}>
+      <Text style={styles.tsaldo}> Conta</Text>
+      <Text style={styles.tsaldo}> R$ 1.300,00 </Text>
+      </View>
+
+      <View style={styles.c3}>
+        
+            {/* Pix */}
+    <View style={styles.menu}>
+    <TouchableOpacity style={styles.btn}>
+    <Image 
+    source={{ uri: 'https://img.icons8.com/?size=50&id=uqpbD9vhCDEQ&format=png' }} 
+    style={styles.icon}
+    />
+    </TouchableOpacity>
+    <Text>Pix</Text>
+    </View>
+
+                  {/* Pagar */}
+              <View style={styles.menu}>
+              <TouchableOpacity style={styles.btn}>
+              <Image 
+              source={{ uri: 'https://cdn-icons-png.flaticon.com/128/39/39881.png' }} 
+              style={styles.icon}
+              />
+              </TouchableOpacity>
+              <Text>Pagar</Text>
+              </View>
+
+      {/* Transferir */}
+      <View style={styles.menu}>
+      <TouchableOpacity style={styles.btn}>
+      <Image 
+      source={{ uri: 'https://cdn-icons-png.flaticon.com/128/15726/15726248.png' }} 
+      style={styles.icon}
+      />
+      </TouchableOpacity>
+      <Text>Transferir</Text>
+      </View>
+
+              {/* depositar*/}
+              <View style={styles.menu}>
+              <TouchableOpacity style={styles.btn}>
+              <Image 
+              source={{ uri: 'https://cdn-icons-png.flaticon.com/128/3459/3459564.png' }} 
+              style={styles.icon}
+              />
+              </TouchableOpacity>
+              <Text>Depositar</Text>
+              </View>
+
+  </View>
+  <View style={[styles.c4]}>
+  <TouchableOpacity style={[styles.btncartoes, { flexDirection: 'row', alignItems: 'center',justifyContent:'center' }]}>
+  <Image 
+  source={{ uri: 'https://cdn-icons-png.flaticon.com/128/68/68918.png' }} 
+  style={styles.icon1}
+  />
+  <Text style={styles.tc}>Meus cartões</Text>
+  </TouchableOpacity>
+  </View>
+
+      <View style={styles.c5}>
+      <Image 
+      source={{uri:'https://i.postimg.cc/Y0npJjbn/pngtree-vector-credit-card-icon-png-image-4186937-removebg-preview-1.png'}} 
+      style={styles.icon8}
+      />
+      <Text style={styles.ts}>Cartão de Crédito</Text>
+      <Text style={styles.ts1}>Fatura atual</Text>
+      <Text style={styles.tsf} > R$ 1.094,80  </Text>
+      <Text style={styles.tsl}>Limite Disponivel R$ 730,00 </Text>
+       
+      </View>
+
+      </SafeAreaView>
+);
+}
+
+const styles = StyleSheet.create({
+  index: {
+  flex: 1,
+  backgroundColor: "#ffffff",
+  },
+
+  topbar: {
+  backgroundColor: '#BB26Eb',
+  height: 50,
+},
+
+  c1: {
+  backgroundColor: '#BB26EB',
+  width: 'auto',
+  height: 190,
+  padding: 15,
+  justifyContent: 'center'
+},
+
+  hello: {
+  fontSize: 20,
+  color: '#fff',
+  fontWeight: '800',
+  padding: 15,
+  justifyContent: 'center',
+  alignItems :'center',
+  paddingHorizontal:-100,
+},
+
+  c2: {
+  backgroundColor: '#ffffff',
+  width: 'auto',
+  height: 115,
+  padding: 15,
+  gap: 10,
+  },
+
+  c3: {
+  backgroundColor: '#ffffff',
+  width: 'auto',
+  height: 140,
+  padding: 15,
+  flexDirection: 'row',
+  gap: 15,
+  },
+
+  c4: {
+  backgroundColor: '#ffffff',
+  width: 'auto',
+  height: 120,
+  justifyContent: 'center',
+  alignItems: 'center',
+  marginLeft :10,
+   
+  },
+
+  c5: {
+  backgroundColor: '#ffffff',
+  width: 'auto',
+  height: 100,
+  paddingHorizontal:20,
+
+},
+
+  tsaldo: {
+  fontSize: 25,
+  fontWeight: 'bold'
+},
+
+  btn: { 
+  height: 85,
+  width: 85,
+  backgroundColor: '#d3d3d3',
+  borderRadius: 100,
+  justifyContent: 'center',
+  alignItems: 'center'
+},
+
+  icon: {
+  width: 40,
+  height: 40,
+  resizeMode: 'contain',
+},
+
+  menu: {
+  gap: 10,
+  alignItems: 'center',
+},
+
+  btncartoes: {
+  height: 85,
+  width: 380,
+  backgroundColor: '#d3d3d3',
+  borderRadius: 15,
+  justifyContent: 'center',
+  padding: 20
+
+  },
+
+ icon1: {
+  width: 50,
+  height: 50,
+  resizeMode: 'contain',
+  paddingHorizontal:25,
+  marginLeft:-10
+},
+
+topbar1:{
+  backgroundColor: '#BB26Eb',
+  height: 50,
+  
+},
+
+icon7:{
+  width: 95,
+  height: 95,
+  borderRadius:10,
+  alignItems :'center',
+  
+},
+ts :{
+  fontSize: 25,
+  fontWeight: 'bold',
+  alignItems :'center',
+  padding:-10,
+  justifyContent: 'center',
+  paddingHorizontal:5
+  },
+
+icon8: {
+
+  width: 60,
+  height: 60,
+  marginLeft: 15,
+  flexDirection: 'row',
+  alignItems :'center',
+  paddingHorizontal :30
+
+},
+ts1 :{
+
+  fontSize: 20,
+  alignItems :'center',
+  paddingHorizontal:5,
+  justifyContent: 'center',
+},
+
+tsf :{
+
+  fontSize: 25,
+  alignItems :'center',
+  fontWeight: 'bold',
+  paddingHorizontal:-10,
+  justifyContent: 'center',
+  
+},
+
+tsl :{
+  fontSize: 20,
+  alignItems :'center',
+  paddingHorizontal:5,
+  justifyContent: 'center'
+  
+},
+
+tc :{
+
+  fontSize: 20,
+  alignItems :'center',
+  paddingHorizontal:90,
+  justifyContent: 'center',
+
+},
+
+pf :{
+
+    height: 80,
+    width: 80,
+    backgroundColor: '#d3d3d3',
+    borderRadius: 100,
+    justifyContent: 'center',
+    alignItems: 'center'
+},
+
+pf2 :{
+
+  backgroundColor: '#BB26Eb',
+  flexDirection: 'row',  
+  alignItems: 'center', 
+  justifyContent: 'flex-end',
+  gap :11
+
+},
+
+icon10 :{
+
+    flexDirection: 'row', 
+    backgroundColor: '#BB26Eb',
+    height: 25,
+    width: 25,
+    paddingHorizontal:-6,
+      
+}
+
+  
+});
