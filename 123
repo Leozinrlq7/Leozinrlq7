@@ -1,0 +1,74 @@
+import React from 'react';
+import { Text, SafeAreaView, StyleSheet } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { CreateBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Text,View } from 'react-native';
+import { Ionicons } from '@expo/vector-icons';
+
+
+
+function HomeScreen() {
+  return (
+     <View style={{flex:1,alignItems:'center',justifyContent:'Center'}}>
+        <Text>TELA INICIAL</Text>
+      </View>
+  );
+},
+
+function SettingsScreen() {
+  return (
+     <View style={{flex:1,alignItems:'center',justifyContent:'Center'}}>
+        <Text>CONFIGURAÇOES </Text>
+      </View>
+  );
+},
+
+
+function Agenda() {
+  return (
+     <View style={{flex:1,alignItems:'center',justifyContent:'Center'}}>
+        <Text>CONFIGURAÇOES </Text>
+      </View>
+  );
+},
+
+
+const Tab =createBottomTabnavigator({
+  export default function App(){
+    return(
+      <NavigationContainer>
+      <Tab.Navigator
+      screenOptions={{
+        headerShown:false,
+        tabBarActiveTintColor :'#6200ee',
+        tabBarstyle:{
+        background:'#f2f2f2'
+        paddingBottom:5,
+        height:90,
+        },
+      }}
+      />
+
+       <Tab.Screen name='Inicio' component={HomeScreen}   options={{
+         tabBarIcon:({color,size})=>(
+         <Ionicons name='home' size={size} color={color} />  
+         ),
+       }}
+       />
+
+        <Tab.Screen name='cashback' component={SettingsScreen}   options={{
+         tabBarIcon:({color,size})=>(
+         <Ionicons name='cashback' size={size} color={color} />  
+         ),
+       }}
+       />
+   <Tab.Screen name='Marcar Horario' component={Agenda}   options={{
+         tabBarIcon:({color,size})=>(
+         <Ionicons name='Agenda' size={size} color={color} />  
+         ),
+     
+       }}
+       />
+       
+    )
+  }
