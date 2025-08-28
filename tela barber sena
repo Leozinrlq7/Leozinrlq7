@@ -1,0 +1,137 @@
+import {
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  View,
+  Image,
+  ScrollView,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
+
+// You can import supported modules from npm
+import { Card } from 'react-native-paper';
+
+// or any files within the Snack
+import AssetExample from './components/AssetExample';
+
+export default function App() {
+  return (
+    <ScrollView style={styles.topbar}>
+      <View style={styles.topbar}>
+        <Image
+          source={{
+            uri: 'https://snack-code-uploads.s3.us-west-1.amazonaws.com/~asset/897947339b11970759fed257f449973b',
+          }}
+          style={styles.img1}
+        />
+      </View>
+
+      <View style={styles.email}>
+        <TextInput style={styles.textemail} placeholder="E-mail"/>
+      </View>
+
+      <View style={styles.email}>
+        <TextInput style={styles.senha} placeholder="Senha"/>
+
+        <TouchableOpacity style={styles.tc}>
+          <Text style={styles.btntext}>ACESSAR</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity style={styles.ceusenha}>
+
+          <Text style={styles.ceusenha}> Esqueceu Senha? </Text>
+        </TouchableOpacity>
+      </View>
+
+      <View style={styles.topbar}>
+        <Image
+          source={{
+            uri: 'https://aldeiacom.com.br/wp-content/uploads/2022/08/senac.png.webp',
+          }}
+          style={styles.senac}
+        />
+      </View>
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  topbar: {
+    flex: 10,
+    justifyContent: 'center',
+    backgroundColor: '#ffffff',
+    padding: 10,
+    alignItems: 'center',
+  },
+  img1: {
+    width: 300,
+    height: 300,
+    marginTop: 5,
+    borderRadius: 10,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginBottom: 85,
+    resizeMode: 'stretch',
+  },
+
+  senac: {
+    width: 250,
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+    position: 'absolute',
+    marginBottom: 50,
+    resizeMode: 'stretch',
+  },
+
+  textemail: {
+    width: 400,
+    height: 50,
+    borderColor: '#F7941D',
+    borderWidth: 1,
+    borderRadius: 25,
+    paddingHorizontal: 15,
+    marginBottom: 15,
+    alignItems: 'center',
+    justifyContent: 'center',
+     color: '#555152',
+  },
+
+  senha: {
+    width: 400,
+    height: 50,
+    borderColor: '#004A8D',
+    borderWidth: 1,
+    borderRadius: 25,
+    paddingHorizontal: 15,
+    marginBottom: 15,
+    color: '#555152',
+     
+  },
+  tc: {
+    fontSize: 30,
+    alignItems: 'center',
+    paddingHorizontal: 90,
+    justifyContent: 'center',
+    marginBottom: 10,
+    backgroundColor: '#004A8D',
+    color: '#ffffff',
+    borderRadius: 25,
+    width: 400,
+    height: 50,
+  },
+  ceusenha: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: '#004A8D',
+  },
+
+  btntext: {
+    fontSize: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+    color: '#ffffff',
+    fontWeight: 'bold',
+  },
+});
