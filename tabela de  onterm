@@ -1,0 +1,19 @@
+export const nomes =[
+
+{nome: 'Davi' ,idade:'30'},
+{nome: 'Jose', idade:'33'},
+{nome: 'Ney',  idade:'35'},
+{nome: 'Grazi',idade:'40'},
+
+]
+
+export const idade ='30 anos'
+
+export const carros =[
+
+{nome: 'Davi' ,idade:'30'},
+{nome: 'Jose', idade:'33'},
+{nome: 'Ney',  idade:'35'},
+{nome: 'Grazi',idade:'40'},
+
+]
