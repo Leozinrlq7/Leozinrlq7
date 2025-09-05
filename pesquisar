@@ -1,0 +1,99 @@
+import {
+  Text,
+  SafeAreaView,
+  StyleSheet,
+  View,
+  TextInput,
+  TouchableOpacity,
+} from 'react-native';
+import React, { useState } from 'react';
+import { pessoas } from './bancodedados/db';
+
+export default function App() {
+  const [busca, setBusca] = useState('');
+  const [resultado, setResultado] = useState(null);
+
+  const pesquisarNome = () => {
+    const encontrado = pessoas.find(
+      (item) => item.nome.toLowerCase() === busca.toLowerCase()
+    );
+    setResultado(encontrado || 'Nome não encontrado');
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.pes2}>
+        <TextInput
+          style={styles.pes}
+          placeholder="𝘿𝙞𝙜𝙞𝙩𝙚 𝙪𝙢 𝙉𝙤𝙢𝙚"
+          value={busca}
+          onChangeText={setBusca}
+          placeholderTextColor="#888"
+        />
+      </View>
+
+      <TouchableOpacity style={styles.bt1} onPress={pesquisarNome}>
+        <Text style={styles.bt2}>𝙋𝙀𝙎𝙌𝙐𝙄𝙎𝘼𝙍</Text>
+      </TouchableOpacity>
+
+      <View style={styles.ida2}>
+        {resultado && (
+          <Text style={{ color: '#fff', fontSize: 16, textAlign: 'center' }}>
+            {typeof resultado === 'string'
+              ? resultado
+              : `Nome encontrado: ${resultado.nome}`}
+          </Text>
+        )}
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    backgroundColor: '#11091a',
+    padding: 8,
+  },
+  pes: {
+    width: 400,
+    height: 45,
+    borderColor: '#0c5149',
+    borderWidth: 2,
+    borderRadius: 25,
+    paddingHorizontal: 15,
+    marginBottom: 15,
+    fontSize: 15,
+    color: '#ffffff',
+  },
+  pes2: {
+    fontSize: 20,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  bt1: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#09c184',
+    borderRadius: 25,
+    height: 45,
+    width: 400,
+    alignSelf: 'center',
+  },
+  ida2: {
+    height: 100,
+    width: 350,
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginTop: 20,
+    borderRadius: 15,
+    alignSelf: 'center',
+  },
+  bt2: {
+    fontSize: 18,
+    color: '#ffffff',
+    fontWeight: 'bold',
+    textAlign: 'center',
+  },
+});
