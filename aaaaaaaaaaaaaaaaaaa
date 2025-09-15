@@ -1,0 +1,93 @@
+import React from 'react';
+import { View, Text, SafeAreaView, StyleSheet } from 'react-native';
+import dayjs from 'dayjs';
+
+const lotes = [
+  { produto: 'Leite', validade: '2025-09-17' },
+  { produto: 'Iogurte', validade: '2025-09-19' },
+];
+
+export default function AlertasScreen() {
+  const hoje = dayjs();
+
+  const alertas = lotes
+    .map((lote) => {
+      const diasRestantes = dayjs(lote.validade).diff(hoje, 'day');
+      if (diasRestantes <= 7) {
+        return `⚠️ ${lote.produto} vence em ${diasRestantes} dia(s).`;
+      }
+      return null;
+    })
+    .filter(Boolean);
+
+  const alertaLeite = alertas.find((msg) => msg.includes('Leite')) || null;
+  const alertaIogurte = alertas.find((msg) => msg.includes('Iogurte')) || null;
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <View style={styles.view0}>
+        <Text style={styles.textalerta1}>Alertas de Vencimento</Text>
+      </View>
+
+      <View style={styles.alertasWrapper}>
+        {alertas.length > 0 ? (
+          alertas.map((msg, idx) => (
+            <View key={idx} style={styles.view1}>
+              <Text style={styles.textoAlerta}>{msg}</Text>
+            </View>
+          ))
+        ) : (
+          <View style={styles.view1}>
+            <Text style={styles.textoAlerta}>Nenhum produto próximo do vencimento.</Text>
+          </View>
+        )}
+      </View>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFDAB9',
+  },
+  view0: {
+    paddingTop: 10,
+    height:100,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  view1: {
+    height: 90,
+    backgroundColor: '#FF7C00',
+    borderTopRightRadius: 40,
+    borderBottomRightRadius: 40,
+    borderBottomLeftRadius: 50,
+    borderTopLeftRadius: 5,
+    paddingLeft: 40,
+    justifyContent: 'center',
+    marginBottom: 15,
+  },
+  textalerta1: {
+    height: 70,
+    width: 260,
+    paddingLeft: 23,
+    fontSize: 20,
+    fontFamily: 'bold',
+    paddingTop: 20,
+    backgroundColor: '#FF4500',
+    color: "#FFF",
+    borderRadius: 25,
+    fontWeight: 500,
+  },
+  textoAlerta: {
+    color: '#FFF',
+    fontSize: 18,
+    fontFamily: 'bold',
+    fontWeight: 600,
+  },
+  alertasWrapper: {
+    paddingHorizontal: 3,
+    paddingTop: 10,
+  },
+});
