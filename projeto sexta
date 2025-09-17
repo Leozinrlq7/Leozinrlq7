@@ -1,0 +1,127 @@
+import React from 'react';
+import { View, Text, SafeAreaView, StyleSheet, ScrollView, Image } from 'react-native';
+import dayjs from 'dayjs';
+
+const lotes = [
+  { produto: 'Leite', validade: '2025-09-19', imagem: 'https://cdn-icons-png.flaticon.com/512/3075/3075977.png' },
+  { produto: 'Iogurte', validade: '2025-09-19', imagem: 'https://cdn-icons-png.flaticon.com/512/1047/1047711.png' },
+  { produto: 'Café Pilão', validade: '2025-09-20', imagem: 'https://cdn-icons-png.flaticon.com/512/924/924514.png' },
+  { produto: 'Biscoito', validade: '2025-09-23', imagem: 'https://cdn-icons-png.flaticon.com/512/1903/1903286.png' },
+  { produto: 'Biscoito Recheado', validade: '2025-09-23', imagem: 'https://cdn-icons-png.flaticon.com/512/1903/1903286.png' },
+  { produto: 'Massa de Pastel', validade: '2025-09-23', imagem: 'https://cdn-icons-png.flaticon.com/512/858/858170.png' },
+  { produto: 'Dadoninho', validade: '2025-09-23', imagem: 'https://cdn-icons-png.flaticon.com/512/1047/1047711.png' },
+];
+
+export default function AlertasScreen() {
+  const hoje = dayjs();
+
+  const alertas = lotes.map((lote) => {
+      const diasRestantes = dayjs(lote.validade).diff(hoje, 'day');
+      if (diasRestantes <= 10) {
+        return { ...lote, diasRestantes };
+      }
+      return null;
+    })
+    .filter(Boolean);
+
+  const getCardColor = (dias) => {
+    if (dias <= 2) return '#E53935';
+    if (dias <= 5) return '#FF9800'; 
+    return '#FFEB3B'; 
+  };
+
+  return (
+    <SafeAreaView style={styles.container}>
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <View style={styles.view0}>
+          <Text style={styles.textalerta1}>Alerta de Vencimento!</Text>
+        </View>
+
+        <View style={styles.alertas}>
+          {alertas.length > 0 ? (
+            alertas.map((lote, idx) => (
+              <View key={idx} style={[styles.view1, { backgroundColor: getCardColor(lote.diasRestantes) }]}>
+                <Image source={{ uri: lote.imagem }} style={styles.icon} />
+                <View>
+                  <Text style={styles.nomeproduto}>{lote.produto}</Text>
+                  <Text style={styles.validade}>Vence em {lote.diasRestantes} dia(s)</Text>
+                </View>
+              </View>
+            ))
+          ) : (
+            <View style={styles.view1}>
+              <Text style={styles.textoAlerta2}>
+                Nenhum produto próximo do vencimento.
+              </Text>
+            </View>
+          )}
+        </View>
+      </ScrollView>
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#FFDAB9',
+  },
+  scrollContent: {
+    paddingBottom: 20,
+  },
+  view0: {
+    paddingTop: 10,
+    height: 100,
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  view1: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    height: 90,
+    borderRadius: 20,
+    paddingLeft: 30,
+    marginBottom: 15,
+    shadowColor: '#000000',
+    shadowOffset: { height: 4 },
+    shadowOpacity: 0.4,
+    shadowRadius: 7,
+  },
+  textalerta1: {
+    height: 70,
+    width: 260,
+    fontSize: 20,
+    paddingTop: 20,
+    backgroundColor: '#FF0000',
+    color: '#FFF',
+    borderRadius: 25,
+    fontWeight: '800',
+    textAlign: 'center',
+    shadowColor: '#000000',
+    shadowOffset: { height: 4 },
+    shadowOpacity: 0.4,
+    shadowRadius: 7,
+  },
+  nomeproduto: {
+    color: '#FFFFFF',
+    fontSize: 18,
+    fontWeight: '700',
+  },
+  validade: {
+    color: '#FFFFFF',
+  },
+  textoAlerta2: {
+    color: '4F4F4F',
+    fontSize: 18,
+    fontWeight: '600',
+  },
+  alertas: {
+    paddingHorizontal: 10,
+  
+  },
+  icon: {
+    width: 40,
+    height: 40,
+    marginRight: 22,
+  },
+});
